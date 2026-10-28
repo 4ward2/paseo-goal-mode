@@ -1,0 +1,34 @@
+{
+  "name": "paseo-goal-mode",
+  "version": "0.1.0",
+  "description": "Goal mode for Paseo: give an agent a goal and acceptance criteria, it keeps working round after round until the criteria are verified. Works with Claude Code, Codex and any ACP provider.",
+  "license": "MIT",
+  "private": true,
+  "files": [
+    "paseo-plugin.json",
+    "index.client.ts",
+    "index.client.tsx",
+    "index.server.ts",
+    "index.server.tsx",
+    "client/",
+    "server/",
+    "shared/"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "esbuild server/runner.test.ts --bundle --platform=node --format=esm --log-level=warning --outfile=node_modules/.cache/goal-mode/runner.test.mjs && node node_modules/.cache/goal-mode/runner.test.mjs"
+  },
+  "devDependencies": {
+    "@getpaseo/plugin": "0.10.2",
+    "@tanstack/react-query": "^5.90.11",
+    "@types/node": "^22.20.5",
+    "@types/react": "~19.2.0",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "typescript": "^5.9.3",
+    "zod": "^4.4.3"
+  },
+  "dependencies": {
+    "@getpaseo/cli": "^0.10.2"
+  }
+}

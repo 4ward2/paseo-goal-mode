@@ -1,0 +1,6 @@
+{
+  "id": "goal-mode",
+  "requirements": {
+    "paseo": ">=0.10.2"
+  }
+}
